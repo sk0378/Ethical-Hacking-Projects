@@ -15,6 +15,7 @@ ToolPurposetcpdumpCommand-line packet capture tool used to record raw network tr
 
 # What I Did
 # Part 1 – Capturing Traffic with tcpdump
+
 Logged into Kali Linux and used tcpdump to begin capturing all packets on the network interface, saving them to a .pcap file for later analysis:
 bashtcpdump -i eth0 -s0 -w testdump.pcap
 While the capture was running, I also generated the real network traffic by:
@@ -23,6 +24,13 @@ _Connecting to an SMB file share on the OWASP target machine using smbclient
 Browsing to the target machine's web server via Firefox and clicking on links_
 
 This simulates what an analyst would do when capturing traffic during a security assessment or incident investigation.
+![Step 1](Step%201.png)
+![Step 2](Step%202.png)
+![Step 3](Step%203.png)
+![Step 4](Step%204.png)
+![Step 5](Step%205.png)
+![Step 6](Step%206.png)
+![Step 7](Step%207.png)
 
 # Part 2 – Analyzing Traffic with Wireshark
 Opened the saved testdump.pcap file in Wireshark and performed the following analysis:
@@ -30,7 +38,13 @@ Opened the saved testdump.pcap file in Wireshark and performed the following ana
 * SMB Filter – Isolated SMB (file sharing) traffic to see the authentication and file share activity that was captured
 * HTTP Filter – Isolated web traffic and inspected individual GET requests, including headers, source/destination IPs, and browser information
 * Follow TCP Stream – Reassembled a full TCP conversation from start to finish, allowing me to read the complete exchange between the client and server
-
+![Step 8](Step%208.png)
+![Step 9](Step%209.png)
+![Step 10](Step%2010.png)
+![Step 11](Step%2011.png)
+![Step 12](Step%2012.png)
+![Step 13](Step%2013.png)
+![Step 14](Step%2014.png)
 
 # Key Takeaways
 * I learned that tcpdump is widely used by security analysts and penetration testers to capture traffic quietly from the command line,  especially on servers with no GUI
