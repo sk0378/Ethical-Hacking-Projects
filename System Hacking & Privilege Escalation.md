@@ -102,6 +102,6 @@ execute -f hacked.cmd
 * I learned how Nmap's service and OS detection scans can reveal far more than just open ports — in this case, identifying an entire Active Directory domain structure from a single scan
 * msfvenom made it clear how quickly a working, encoded payload can be generated and hosted for delivery, which highlights why unrestricted outbound web access and unmonitored executable downloads are a major risk on corporate networks
 * Setting up the multi/handler listener showed me how the attacker and payload must have matching payload types and connection settings (LHOST/LPORT) to successfully establish a session
-* The privilege escalation step was the most important part of the lab — getsystem showed how a single misconfiguration or exploitable service (like Named Pipe Impersonation) can take an attacker from a standard user account straight to full SYSTEM control
+* The privilege escalation step was the most important part of the lab —> getSystem showed how a single misconfiguration or exploitable service (like Named Pipe Impersonation) can take an attacker from a standard user account straight to full SYSTEM control
 * Once SYSTEM access was achieved, actions like hashdump and remote command execution demonstrated just how much damage is possible post-compromise: credential theft, persistence, and full control over the machine
 * This lab reinforced why defense-in-depth matters — network segmentation, application whitelisting, and monitoring for unusual process execution could have interrupted this attack chain at multiple points
