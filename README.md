@@ -1,6 +1,7 @@
 [Back to all projects](https://github.com/sk0378/Ethical-Hacking-Projects/tree/Network-Traffic-Analysis-%26-Packet-Capture)
 
-# Ethical Hacking Projects
+# Ethical Hacking Projects 
+# Author: Saniyyah Kelly
 
 Hi, I'm Saniyyah Kelly — a Cybersecurity graduate student at Johns Hopkins University (Whiting School of Engineering) with a background in Computer Information Systems and Network Systems Management from CUNY Medgar Evers College. This repository documents hands-on offensive security labs I've completed, covering network analysis, password cracking, exploitation, and post-exploitation techniques using industry-standard tools in a Kali Linux environment.
 
