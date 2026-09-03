@@ -18,7 +18,7 @@ Each project lives on its own branch below, with a full write-up and screenshots
 
 | Project | Summary |
 |---------|---------|
-| [Network Traffic Analysis & Packet Capture](https://github.com/sk0378/Ethical-Hacking-Projects/tree/Network-Traffic-Analysis-%26-Packet-Capture) | Captured live traffic with tcpdump, generated multi-protocol activity against an OWASP target, and reconstructed full TCP sessions in Wireshark to expose cleartext data on unencrypted connections. |
+| [Network Traffic Analysis & Packet Capture](https://github.com/sk0378/Ethical-Hacking-Projects/blob/Network-Traffic-Analysis-%26-Packet-Capture/Network_Analysis.md) | Captured live traffic with tcpdump, generated multi-protocol activity against an OWASP target, and reconstructed full TCP sessions in Wireshark to expose cleartext data on unencrypted connections. |
 | [Password Cracking & Wordlist Generation](https://github.com/sk0378/Ethical-Hacking-Projects/tree/password_cracking_wordlist_generation) | Built custom wordlists with CeWL and Crunch, merged them with John the Ripper's dictionary, then cracked SHA-512 Linux password hashes using both John the Ripper and Hashcat. |
 | [System Hacking & Privilege Escalation](https://github.com/sk0378/Ethical-Hacking-Projects/tree/System_Hacking_%26_Privilege_Escalation) | Performed Nmap reconnaissance against a Windows Active Directory target, delivered a custom Meterpreter payload with msfvenom, and escalated privileges to NT AUTHORITY\SYSTEM, followed by hash dumping and remote command execution. |
 | Network Reconnaissance & Packet Analysis | Used hping3 and Scapy to perform host discovery, port scanning, and custom packet crafting at the protocol level, validating results against Wireshark captures. |
