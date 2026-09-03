@@ -25,3 +25,8 @@ Each project lives on its own branch below, with a full write-up and screenshots
 | [System Hacking & Privilege Escalation](https://github.com/sk0378/Ethical-Hacking-Projects/blob/System_Hacking_%26_Privilege_Escalation/README.md) | Performed Nmap reconnaissance against a Windows Active Directory target, delivered a custom Meterpreter payload with msfvenom, and escalated privileges to NT AUTHORITY\SYSTEM, followed by hash dumping and remote command execution. |
 | Network Reconnaissance & Packet Analysis | Used hping3 and Scapy to perform host discovery, port scanning, and custom packet crafting at the protocol level, validating results against Wireshark captures. |
 | Vulnerability Assessment & Exploitation | Configured Metasploit with a PostgreSQL backend, scanned an OWASP target with WMAP, and exploited a TikiWiki CMS remote code execution vulnerability to gain and enumerate a remote shell. |
+
+
+## NOTE
+
+All labs were performed in an isolated home lab using OWASP BWA and Windows Server VMs;  no unauthorized systems were accessed.
