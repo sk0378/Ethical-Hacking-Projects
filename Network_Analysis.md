@@ -1,5 +1,4 @@
-# Lab 06: Network Analysis
-# Course: Ethical Hacking | Platform: NETLAB+
+# Network Analysis
 
 # Overview
 Network analysis is a critical skill in cybersecurity. Being able to capture and inspect network traffic allows security professionals to detect intrusions, investigate breaches, and understand how attackers move through a network. In this lab, I used industry-standard tools to capture live network traffic and analyze it for suspicious or sensitive activity.
