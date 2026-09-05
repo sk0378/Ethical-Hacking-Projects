@@ -1,6 +1,6 @@
 [Home](https://github.com/sk0378/Ethical-Hacking-Projects/blob/Network-Traffic-Analysis-%26-Packet-Capture/Network_Analysis.md)
 
-# Vulnerability Assessment & Exploitation
+# Vulnerability Assessment with OpenVAS
 
 # Overview
 Before exploiting a target, a proper security assessment starts with identifying what vulnerabilities actually exist on it. In this lab, I set up and ran OpenVAS (via the Greenbone Security Assistant web interface) to perform a full vulnerability scan against an OWASP Broken Web Application target, analyzed the resulting findings by severity, and identified critical, exploitable vulnerabilities in the target's services.
