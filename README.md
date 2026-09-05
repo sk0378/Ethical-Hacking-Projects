@@ -47,7 +47,7 @@ In a separate terminal, sent crafted TCP SYN packets to specific ports using hpi
 hping3 -S -c 1 -s 5151 -p 80 -V 192.168.9.1
 hping3 -S -c 1 -s 5151 -p 22 -V 192.168.9.1
 ```
-Port 80 responded with SYN/ACK flags (open), while port 22 returned 100% packet loss (filtered/closed) — and tcpdump's live capture confirmed the same SYN, SYN/ACK, and RST flag sequence for the correlating traffic.
+Port 80 responded with SYN/ACK flags (open), while port 22 returned 100% packet loss (filtered/closed) and tcpdump's live capture confirmed the same SYN, SYN/ACK, and RST flag sequence for the correlating traffic.
 ![Step 4](s4.png)
 ![Step 5](s5.png)
 ![Step 6](s6.png)
@@ -65,4 +65,4 @@ Out of the 61 ports scanned, only ports 53 (domain/DNS) and 80 (http) responded,
 * ICMP timestamp requests are a lesser-known but useful host discovery technique, since some environments block standard ping (echo request) traffic but still respond to other ICMP types
 * Running tcpdump alongside hping3 reinforced how a TCP three-way handshake attempt looks at the packet level, and how the returned flags (SYN/ACK vs. no response vs. RST) directly indicate a port's state
 * Scanning a full port range in a single command was much more efficient than testing each port one at a time, and it's the same underlying principle that automated tools like Nmap use at scale
-* This lab reinforced why understanding manual packet crafting matters even when automated tools exist — knowing what's happening at the protocol level makes it much easier to troubleshoot false positives/negatives or evade basic detection during a real assessment
+* This lab reinforced why understanding manual packet crafting matters even when automated tools exist, knowing what's happening at the protocol level makes it much easier to troubleshoot false positives/negatives or evade basic detection during a real assessment
