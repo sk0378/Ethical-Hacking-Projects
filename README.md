@@ -38,7 +38,7 @@ Launched an immediate scan against the OWASP BWA target IP directly from the das
 # Part 3 – Analyzing the Scan Report
 Once the scan completed, reviewed the full results report, which returned 699 total findings. Several critical (10.0 High severity) vulnerabilities stood out immediately, including:
 * **Tiki Wiki CMS Groupware End of Life Detection** — an outdated, unsupported CMS running on the target, a common real-world entry point for attackers
-* **Apache Tomcat Manager/Host Manager/Server Status Default/Hardcoded Credentials** — default credentials left active on an administrative interface
+* **Apache Tomcat Manager/Host Manager/Server Status Default/Hardcoded Credentials** default credentials left active on an administrative interface
 * Multiple high-severity Joomla! and Apache HTTP Server vulnerabilities
 
 Also reviewed the built-in CVSS Base Score Calculator, which is used to manually compute a vulnerability's severity score from its access vector, complexity, and impact metrics.
@@ -57,4 +57,4 @@ Rather than relying only on the one-off "Immediate Scan," configured a saved, na
 * The scan results reinforced how outdated software (like an end-of-life CMS) and default/hardcoded credentials remain some of the most common and highest-severity findings in real-world environments, and are often the easiest vulnerabilities for an attacker to exploit
 * Reviewing the CVSS calculator helped me understand how a vulnerability's severity score is actually derived from its access vector, complexity, and required authentication, rather than treating a "High" severity rating as a black box
 * Setting up a named, reusable scan task instead of only running immediate scans showed me how a real vulnerability management program works: scans need to be repeatable and scheduled, not just one-time checks, since new vulnerabilities are discovered constantly
-* This lab reinforced why vulnerability scanning is the natural first step before any exploitation — you can't prioritize what to test manually or exploit further without first knowing what's actually exposed on a target
+* This lab reinforced why vulnerability scanning is the natural first step before any exploitation and that you can't prioritize what to test manually or exploit further without first knowing what's actually exposed on a target
