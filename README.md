@@ -3,7 +3,7 @@
 # Ethical Hacking Projects 
 # Author: Saniyyah Kelly
 
-Hi, I'm Saniyyah Kelly — a Cybersecurity graduate student at Johns Hopkins University (Whiting School of Engineering) with a background in Computer Information Systems and Network Systems Management from CUNY Medgar Evers College. This repository documents hands-on offensive security labs I've completed, covering network analysis, password cracking, exploitation, and post-exploitation techniques using industry-standard tools in a Kali Linux environment.
+Hi, I'm Saniyyah Kelly, a Cybersecurity graduate student at Johns Hopkins University (Whiting School of Engineering) with a background in Computer Information Systems and Network Systems Management from CUNY Medgar Evers College. This repository documents hands-on offensive security labs I've completed, covering network analysis, password cracking, exploitation, and post-exploitation techniques using industry-standard tools in a Kali Linux environment.
 
 Each project lives on its own branch below, with a full write-up and screenshots documenting the process step by step.
 
@@ -14,8 +14,6 @@ Each project lives on its own branch below, with a full write-up and screenshots
 **Offensive Security Tools:** Nmap, Wireshark, Metasploit, msfvenom, John the Ripper, Hashcat, CeWL, Crunch, tcpdump, Scapy, hping3, Xplico, Armitage
 
 **Platforms & Languages:** Kali Linux, GCP, Virtual Machines, PowerShell, Python
-
-**Other:** Microsoft Office, Google Workspace
 
 ## Projects
 
@@ -30,4 +28,4 @@ Each project lives on its own branch below, with a full write-up and screenshots
 
 ## NOTE
 
-All labs were performed in an isolated NETLAB+ environment using OWASP BWA and Windows Server VMs;  no unauthorized systems were accessed.
+All labs were performed in an isolated NETLAB+ environment using OWASP BWA and Windows Server VMs;  no unauthorized systems were accessed :)
