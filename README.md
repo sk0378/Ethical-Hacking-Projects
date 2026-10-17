@@ -3,13 +3,13 @@
 # Vulnerability Assessment with OpenVAS
 
 # Overview
-Before exploiting a target, a proper security assessment starts with identifying what vulnerabilities actually exist on it. In this lab, I set up and ran OpenVAS (via the Greenbone Security Assistant web interface) to perform a full vulnerability scan against an OWASP Broken Web Application target, analyzed the resulting findings by severity, and identified critical, exploitable vulnerabilities in the target's services.
+Before exploiting a target, a proper security assessment starts with identifying what vulnerabilities actually exist on it. In this lab, I ran OpenVAS (via the Greenbone Security Assistant web interface) to perform a full vulnerability scan against an OWASP Broken Web Application target, analyzed the resulting findings by severity, and identified critical, exploitable vulnerabilities in the target's services.
 
 # Tools Used
 | Tool | Purpose |
 |------|---------|
-| OpenVAS (Greenbone Vulnerability Manager) | Open-source vulnerability scanner used to identify security weaknesses on the target |
-| Greenbone Security Assistant (GSA) | Web-based UI used to configure scans, manage tasks, and review vulnerability reports |
+| OpenVAS (Greenbone Vulnerability Manager) | An Open-source vulnerability scanner used to identify security weaknesses on the target |
+| Greenbone Security Assistant (GSA) | A Web-based UI used to configure scans, manage tasks, and review vulnerability reports |
 
 # Lab Environment
 * Kali Linux – Attacker/analyst machine, running the OpenVAS scanner and manager services
@@ -36,24 +36,24 @@ Launched an immediate scan against the OWASP BWA target IP directly from the das
 ![Step 5](s5.png)
 
 # Part 3 – Analyzing the Scan Report
-Once the scan completed, reviewed the full results report, which returned 699 total findings. Several critical (10.0 High severity) vulnerabilities stood out immediately, including:
-* **Tiki Wiki CMS Groupware End of Life Detection** — an outdated, unsupported CMS running on the target, a common real-world entry point for attackers
-* **Apache Tomcat Manager/Host Manager/Server Status Default/Hardcoded Credentials** default credentials left active on an administrative interface
-* Multiple high-severity Joomla! and Apache HTTP Server vulnerabilities
+Once the scan was completed, I reviewed the full results report, which returned 699 total findings. Several critical (10.0 High severity) vulnerabilities stood out immediately, including:
+* **Tiki Wiki CMS Groupware End of Life Detection** — which is an outdated, unsupported CMS running on the target, a common real-world entry point for attackers
+* **Apache Tomcat Manager/Host Manager/Server Status Default/Hardcoded Credentials** — default credentials left active on an administrative interface
+* Multiple high-severity cases and Apache HTTP Server vulnerabilities
 
-Also reviewed the built-in CVSS Base Score Calculator, which is used to manually compute a vulnerability's severity score from its access vector, complexity, and impact metrics.
+Also reviewed the built-in CVSS Base Score Calculator, which is used to manually compute a vulnerability's severity score based on its attack vector, complexity, and impact metrics.
 ![Step 6](s6.png)
 ![Step 7](s7.png)
 ![Step 8](s8.png)
 
 # Part 4 – Creating a Reusable Scan Task
-Rather than relying only on the one-off "Immediate Scan," configured a saved, named scan task ("OWASP Scan") targeting the OWASP asset group, using the same "Full and very deep ultimate" scan config, to demonstrate how a task can be reused, scheduled, or rerun for continuous assessment instead of a single ad hoc scan.
+Rather than relying only on the one-off "Immediate Scan," configure a saved, named scan task ("OWASP Scan") targeting the OWASP asset group, using the same "Full and very deep ultimate" scan config, to demonstrate how a task can be reused, scheduled, or rerun for continuous assessment instead of a single ad hoc scan.
 ![Step 9](s9.png)
 ![Step 10](s10.png)
 ![Step 11](s11.png)
 
 # Key Takeaways
-* I learned that OpenVAS's "Full and very deep ultimate" scan profile is extremely thorough, checking against tens of thousands of NVTs across 64 categories, which is why a single scan can take a significant amount of time to complete
+* I noticed how thorough OpenVAS's "Full and very deep ultimate" scan profile is, while checking against tens of thousands of NVTs across 64 categories, which is why a single scan can take a significant amount of time to complete
 * The scan results reinforced how outdated software (like an end-of-life CMS) and default/hardcoded credentials remain some of the most common and highest-severity findings in real-world environments, and are often the easiest vulnerabilities for an attacker to exploit
 * Reviewing the CVSS calculator helped me understand how a vulnerability's severity score is actually derived from its access vector, complexity, and required authentication, rather than treating a "High" severity rating as a black box
 * Setting up a named, reusable scan task instead of only running immediate scans showed me how a real vulnerability management program works: scans need to be repeatable and scheduled, not just one-time checks, since new vulnerabilities are discovered constantly
