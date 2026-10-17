@@ -3,7 +3,7 @@
 # Password Cracking & Wordlist Generation
 
 # Overview
-Weak and reused passwords remain one of the most common ways attackers gain access to systems. Understanding how password hashes are stored, cracked, and defended against is a core skill in cybersecurity. In this lab, I built custom wordlists from target-specific data and used industry-standard cracking tools to recover passwords from Linux password hashes, simulating how an attacker or penetration tester would approach a real password audit.
+Weak and reused passwords remain one of the most common ways for attackers to gain access to systems. Understanding how password hashes are stored, cracked, and defended against is a core skill in cybersecurity. In this lab, I built custom wordlists from target-specific data and used industry-standard cracking tools to recover passwords from Linux password hashes, simulating how an attacker or penetration tester would approach a real password audit.
 
 # Tools Used
 | Tool | Purpose |
@@ -27,7 +27,7 @@ Used CeWL to spider the OWASP BWA target site and pull words directly off the pa
 ```bash
 cewl -w owaspwords.txt -d 2 -m 5 192.168.68.12
 ```
-Used Crunch to generate a brute-force style wordlist from scratch, based on a defined character set and word length:
+Used Crunch to generate a brute-force-style wordlist from scratch, based on a defined character set and word length:
 ```bash
 crunch 4 8 charset.lst lalpha -o list.txt
 ```
@@ -93,8 +93,8 @@ hashcat -m 1800 hashes3.txt mylist.txt
 
 # Key Takeaways
 * I learned that CeWL is a useful reconnaissance tool for building target-specific wordlists, since people and organizations often base passwords on words tied to their own websites, branding, or names
-* Crunch showed me how quickly a brute-force wordlist can grow — even a small character set and length range produced tens of millions of possible passwords
-* I also learned that /etc/shadow stores password hashes with salts, and how unshadow combines it with /etc/passwd to create a file that cracking tools can actually work with
-* John the Ripper's default wordlist alone was enough to crack both test passwords almost instantly, reinforcing how dangerous weak, common passwords like "123456" and "password" really are
-* Hashcat requires a stricter input format than John, so I learned the importance of correctly formatting hash files before running a cracking tool against them
+* Crunch showed me how quickly a brute-force wordlist can grow; even a small character set and length range produced tens of millions of possible passwords
+* I also gained an understanding of how /etc/shadow stores password hashes with salts, and how unshadow combines it with /etc/passwd to create a file that cracking tools can actually work with
+* Observed that John the Ripper's default wordlist alone was enough to crack both test passwords almost instantly, reinforcing how dangerous weak common passwords like "123456" and "password" really are
+* Since Hashcat requires a stricter input format than John, I quickly followed up on the importance of correctly formatting hash files before running a cracking tool against them
 * Cracking the same hashes with two different tools (John and Hashcat) reinforced how consistent and reproducible password auditing results are, and why organizations perform these audits to catch weak credentials before attackers do
