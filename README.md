@@ -28,4 +28,4 @@ Each project lives on its own branch below, with a full write-up and screenshots
 
 ## NOTE
 
-All labs were performed in an isolated NETLAB+ environment using OWASP BWA and Windows Server VMs; no unauthorized systems were accessed :)
+All labs were performed in a practical, isolated NETLAB+ environment using OWASP BWA and Windows Server VMs; no unauthorized systems were accessed :)
