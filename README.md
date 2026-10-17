@@ -71,7 +71,7 @@ exploit -j -z
 ![Step 17](s18.png)
 
 # Part 4 – Delivering and Executing the Payload
-On the Windows target, browsed to the Kali web server and downloaded exploit.exe from the hosted lab21 directory, then ran it. Back on Kali, the handler caught the callback and opened a Meterpreter session:
+On the Windows target, I browsed to the Kali web server and downloaded exploit.exe from the hosted lab21 directory, then ran it. Back on Kali, the handler caught the callback and opened a Meterpreter session:
 ```bash
 sysinfo
 ```
@@ -101,9 +101,9 @@ execute -f hacked.cmd
 ![Step 27](s28.png)
 
 # Key Takeaways
-* I learned how Nmap's service and OS detection scans can reveal far more than just open ports — in this case, identifying an entire Active Directory domain structure from a single scan
+* I learned how Nmap's service and OS detection scans can reveal far more than just open ports and, in this case, identify an entire Active Directory domain structure from a single scan
 * msfvenom made it clear how quickly a working, encoded payload can be generated and hosted for delivery, which highlights why unrestricted outbound web access and unmonitored executable downloads are a major risk on corporate networks
 * Setting up the multi/handler listener showed me how the attacker and payload must have matching payload types and connection settings (LHOST/LPORT) to successfully establish a session
-* The privilege escalation step was the most important part of the lab, getsystem showed how a single misconfiguration or exploitable service (like Named Pipe Impersonation) can take an attacker from a standard user account straight to full SYSTEM control
+* The privilege escalation step was the most important part of the lab; getSystem showed how a single misconfiguration or exploitable service (like Named Pipe Impersonation) can take an attacker from a standard user account straight to full SYSTEM control
 * Once SYSTEM access was achieved, actions like hashdump and remote command execution demonstrated just how much damage is possible post-compromise: credential theft, persistence, and full control over the machine
-* This lab reinforced why defense-in-depth matters — network segmentation, application whitelisting, and monitoring for unusual process execution could have interrupted this attack chain at multiple points
+* This lab reinforced why defense-in-depth matters; especially measures like network segmentation, application whitelisting, and monitoring for unusual process execution could have interrupted this attack chain at multiple points
